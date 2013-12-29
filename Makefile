@@ -1,9 +1,9 @@
-VERSION=v1.3.0-beta.4
+BUILD_PATH = "canary"
 
 default:
-	@curl -O http://builds.emberjs.com/tags/$(VERSION)/ember.js
-	@curl -O http://builds.emberjs.com/tags/$(VERSION)/ember.min.js
-	@curl -O http://builds.emberjs.com/tags/$(VERSION)/ember.prod.js
-	@curl -O http://builds.emberjs.com/tags/$(VERSION)/ember-template-compiler.js
+	@curl -O http://builds.emberjs.com/$(BUILD_PATH)/ember.js
+	@curl -O http://builds.emberjs.com/$(BUILD_PATH)/ember.min.js
+	@curl -O http://builds.emberjs.com/$(BUILD_PATH)/ember.prod.js
+	@curl -O http://builds.emberjs.com/$(BUILD_PATH)/ember-template-compiler.js
 
 .PHONY: default
